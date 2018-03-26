@@ -1,0 +1,172 @@
+/* Fonts from Google Fonts - more at https://fonts.google.com */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+.wrapper, .global-wrapper{
+    height: 80vh;
+    width: 80vw;
+}
+html, body{
+  height: 100vh;
+  width: 100vw;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+body {
+  margin: 0;
+  background-color: white;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  text-align: center;
+  background-color: white;
+  
+  
+}
+
+#bggrad{
+  -webkit-animation: bgGradientColorAnim 10s ease infinite;
+  animation: bgGradientColorAnim 10s ease infinite;
+  opacity: 1;
+  pointer-events: none;
+ /* mix-blend-mode: screen;*/
+}
+
+@-webkit-keyframes bgGradientColorAnim {
+  0%{background-position:100% 0%}
+  50%{background-position:0% 100%}
+  100%{background-position:100% 0%}
+}
+@keyframes bgGradientColorAnim { 
+  0%{background-position:100% 0%}
+  50%{background-position:0% 100%}
+  100%{background-position:100% 0%}
+}
+
+p,h1{
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  opacity: 1;
+  transition: 1s opacity;
+  font-size: 1.4em;   
+}
+
+.wrapper {
+  margin: 0;
+  padding: 0;
+  
+  display: grid;
+  grid-gap: 0;    
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 30% 10% 50% 10%;
+  grid-template-areas:
+      "a a a a a"
+      "b b b b b"
+      "c c d d d"
+      "e e e e e";  
+}
+
+.panel, .an1, .an2, #mesh {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.a {grid-area: a;}
+.b {grid-area: b;}
+.c {grid-area: c;}
+.d {grid-area: d;}
+.e {grid-area: e;}
+.a, .b, .c, .d, .e {
+}
+.panel p {
+    padding: 0vh;
+}
+.an1 {
+  transition-timing-function: ease-out;
+  animation: dropin 1s;
+  height: 80%;
+  width: 80%;
+  overflow: hidden;
+  
+}
+.an2 {
+  transition-timing-function: ease-out;
+  animation: fadein 1.5s; 
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+#mesh{
+  height: 100%;
+  width: 100%;
+  background: none;
+}
+/*
+#mesh{
+  animation: 120s bgcol linear infinite;
+}
+*/
+@keyframes bgcol {
+  0% {background:black;}
+  50% {background:rgba(255, 255, 255, 0);}
+  100% {background:black;}
+}
+
+/*- animation */
+@keyframes fadein {
+  12%{
+     opacity: 0;
+  } 
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@keyframes dropin {
+  from {transform: translateY(-50px); }
+  to   {transform: translateY(0px); }
+}
+
+.linkwrap{
+  text-align: left;
+  /*background-color: red !important;*/
+}
+
+#popup{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#vid{
+  width: 70%;
+  /*max-height: 90%;*/
+  opacity:0;
+}
+
+/*- queries */
+
+@media screen and (max-width: 640px) {
+    .wrapper {     
+    grid-template-rows: 30% 30% 30% 10%;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas:
+                  "a a a b b b"
+                  "c c c c c c"
+                  "d d d d d d"
+                  "e e e e e e";
+    }
+    h1{
+        font-size: 1.1em;
+
+    }
+    .b{
+      padding: 1em;  
+    }  
+}
+
