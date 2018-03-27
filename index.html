@@ -31,17 +31,17 @@
     <div id="bggrad" style="position:absolute; height: 100%; width:100%; z-index:1;"></div>
     <div class="global-wrapper" style="z-index:2;">
   
-      <div id="popup" style="position: absolute; bottom:10vh; height:0%; width:80%; z-index: 10; display:none; overflow: hidden;">
-          <a href="mailto:andreytme@gmail.com">andreytme@gmail.com</a>
 <!--
+      <div id="popup" style="position: absolute; bottom:10vh; height:0%; width:80%; z-index: 10; display:none; overflow: hidden;">  
         <video id="vid" controls>
           <source src="mov_bbb.mp4" type="video/mp4">
           <source src="mov_bbb.ogg" type="video/ogg">
           Your browser does not support HTML5 video.
            stop audio 
         </video>
--->
       </div>
+-->
+        
       <div class="wrapper">
         <div class="panel a">
             <div class="an1">
@@ -64,7 +64,7 @@
             </a>
           </div>
         </div>
-        <div class="panel e"><p>contact</p></div>
+        <div class="panel e"><a class = "link" href="mailto:andreytme@gmail.com">andreytme@gmail.com</a></div>
       </div>  
     </div> 
     
@@ -170,44 +170,49 @@
           oldRendering[0].outerHTML = "";
           renderContent(); 
         }
-           
-        $(document).ready(function() {
-          
-          //open popup
-          $( ".e" ).on( "click", function() { 
-            $("#popup").css('display', 'flex');
-            $( "#popup" ).animate({height:"80%"},500);
-            $("#vid").animate({opacity:"1"},700);
-            //$("#bggrad").animate({opacity:"0"},700);
-            $("#popup").queue(function (next) { 
-              $(".panel").css('display', 'none');
-              next();
-            });
-          });
-          
-          //close
-          $( "#popup" ).on( "click", function() { 
-            $(".panel").css('display', 'flex'); 
-            $( "#popup" ).animate({height:"0%"},500);
-            $("#vid").animate({opacity:"0"},300);
-            //$("#bggrad").animate({opacity:"0.4"},600);
-            $("#popup").queue(function (next) { 
-              $("#popup").css('display', 'none');   
-              next();
-            });
-            
-            $("#popup").queue(function (next) { 
-              var oldRendering = document.getElementById("mesh").childNodes;
-              oldRendering[0].outerHTML = "";
-              renderContent();  
-              next();
-            });
-            document.getElementById("vid").pause();
-            
-          });
-        
 
-        });  
+//popup stuff
+           
+//        $(document).ready(function() {
+//          
+//          //open popup
+//          $( ".e" ).on( "click", function() { 
+//            $("#popup").css('display', 'flex');
+//            $( "#popup" ).animate({height:"80%"},500);
+//            $("#vid").animate({opacity:"1"},700);
+//            //$("#bggrad").animate({opacity:"0"},700);
+//              
+//            $("#popup").queue(function (next) { 
+//              $(".panel").css('display', 'none');
+//              next();
+//            });
+//              
+//          });
+//          
+//          //close
+//          $( "#popup" ).on( "click", function() { 
+//            $(".panel").css('display', 'flex'); 
+//            $( "#popup" ).animate({height:"0%"},500);
+//            $("#vid").animate({opacity:"0"},300);
+//            //$("#bggrad").animate({opacity:"0.4"},600);
+//              
+//            $("#popup").queue(function (next) { 
+//              $("#popup").css('display', 'none');   
+//              next();
+//            });
+//            
+//            $("#popup").queue(function (next) { 
+//              var oldRendering = document.getElementById("mesh").childNodes;
+//              oldRendering[0].outerHTML = "";
+//              renderContent();  
+//              next();
+//            });
+//            //document.getElementById("vid").pause();
+//            
+//          });
+//        
+//
+//        });  
         
     </script>
     
