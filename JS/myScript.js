@@ -29,9 +29,9 @@ function randomize()
   var mainclr = panels[0].style.backgroundColor; 
   panels[1].style.backgroundColor = mainclr;
   panels[2].style.backgroundColor = tinycolor(mainclr).complement();
-  panels[3].style.backgroundColor = tinycolor(panels[2].style.backgroundColor).brighten();
-  panels[4].style.backgroundColor = tinycolor(panels[2].style.backgroundColor).darken();
-  $('#popup').css("backgroundColor", panels[4].style.backgroundColor);
+  panels[3].style.backgroundColor = tinycolor(panels[2].style.backgroundColor).darken();
+//  panels[4].style.backgroundColor = tinycolor(panels[2].style.backgroundColor).darken();
+//  $('#popup').css("backgroundColor", panels[4].style.backgroundColor);
     
   //font color
   for (i = 0; i < panels.length; i++) 
