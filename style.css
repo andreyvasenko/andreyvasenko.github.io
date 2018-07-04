@@ -1,193 +1,200 @@
 /* Fonts from Google Fonts - more at https://fonts.google.com */
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
-.wrapper, .global-wrapper{
-    height: 80vh;
-    width: 80vw;
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+
+:root {
+	--bg: white;
+
+	--c1: rgba(245, 245, 245, 0.8);
+
+	--s: 250px;
+	--meshS: 250px;
+	--bgs: 1000px;
+	--shadow: 0 0.4rem 8rem -1rem rgba(0, 0, 0, 0.6);
+
+	/*	to be randomized*/
+	--c3: #FEDF03;
+	--c4: #0BB4C1;
+
+	--cbtn1: rgba(0, 0, 0, 0.8);
+	--cbtnhover1: rgba(0, 0, 0, 0.9);
+	--cbtn2: var(--c1);
+	--cbtnhover2: rgba(245, 245, 245, 0.9);
 }
-html, body{
-  height: 100vh;
-  width: 100vw;
-  
-  display: flex;
-  justify-content: center;
-  align-items: center; 
+
+.no-js {
+	visibility: hidden;
+	opacity: 0;
+}
+
+.js {
+	visibility: visible;
+	opacity: 1;
+	transition: opacity .5s ease 1s;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+html,body {
+	height: 100%;
+	width: 100%;
 }
 
 body {
-  margin: 0;
-  background-color: white;
-  font-family: "Open Sans", sans-serif;
-  font-size: 1em;
-  background-color: white;
+	background: var(--bg);
+	display: grid;
 }
 
-#bggrad{
-  -webkit-animation: bgGradientColorAnim 20s linear infinite;
-  animation: bgGradientColorAnim 20s linear infinite;
-  opacity: 1;
-  pointer-events: none;
- /* mix-blend-mode: screen;*/
+#bg {
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	overflow: hidden;
+}
+#bg:before {
+	position: absolute;
+	content: "";
+	left: calc(50% - calc(var(--bgs) / 2));
+	top: calc(50% - calc(var(--bgs) / 4));
+	width: var(--bgs);
+	height: calc(var(--bgs) / 2);
+	border-radius: 100%;
+	background-color: var(--c3);
+	filter: blur(calc(var(--bgs) / 5));
+	animation: bg-anim 30s linear infinite reverse;
+	animation-delay: -1s;
 }
 
-@-webkit-keyframes bgGradientColorAnim {
-  0%{background-position:100% 0%}
-  50%{background-position:0% 100%}
-  100%{background-position:100% 0%}
-}
-@keyframes bgGradientColorAnim { 
-  0%{background-position:100% 0%}
-  50%{background-position:0% 100%}
-  100%{background-position:100% 0%}
+#bg:after {
+	position: absolute;
+	content: "";
+	left: calc(50% - calc(var(--bgs) / 4));
+	top: calc(50% - calc(var(--bgs) / 2));
+	width: calc(var(--bgs) / 2);
+	height: var(--bgs);
+	border-radius: 100%;
+	background-color: var(--c4);
+	filter: blur(calc(var(--bgs) / 5));
+	animation: bg-anim 30s linear infinite;
+	animation-delay: -1s;
 }
 
-p,h1{
-  margin: 0;
-  padding: 0;
+#content {
+	margin: auto;
+	box-shadow: var(--shadow);
+	z-index: 1;
+	border-radius: 8px 8px 0px 0px;
+	overflow: hidden;
+}
+
+#anim-object {
+	height: calc(var(--s) / 2);
+	width: calc(var(--s) / 3);
 }
 
 h1 {
-  opacity: 1;
-  transition: 1s opacity;
-  font-size: 1.4em;
-  text-align: center;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 1.5rem;
+	font-weight: 700;
+	margin-top: -1rem;
+	/*	animation: fadein 1s ease;*/
 }
 
-.wrapper {
-  margin: 0;
-  padding: 0;
-  
-  display: grid;
-  grid-gap: 0;    
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 30% 10% 60% /*10%*/;
-  grid-template-areas:
-      "a a a a a"
-      "b b b b b"
-      "c c d d d"
-/*      "e e e e e";  */
+h1 span {
+	font-weight: 400;
 }
 
-.panel, .an1, .an2, #mesh {
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center; 
+.info {
+	text-align: center;
+	width: var(--s);
+	margin: auto;
+	background-color: var(--c1);
 }
 
-.a {grid-area: a;}
-.b {grid-area: b;}
-.c {grid-area: c;}
-.d {grid-area: d;}
-/*.e {grid-area: e;}*/
-.a, .b, .c, .d, .e {
-}
-.panel p {
-    padding: 0vh;
-}
-.an1 {
-  transition-timing-function: ease-out;
-  animation: dropin 1s;
-  height: 80%;
-  width: 80%;
-  overflow: hidden;
-  
-}
-.an2 {
-  transition-timing-function: ease-out;
-  animation: fadein 1.5s; 
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
+.info p {
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 400;
+	padding: 0.5rem;
 }
 
-#mesh{
-  height: 100%;
-  width: 100%;
-  background: none;
+#anim-object, #mesh {
+	margin: 0 auto;
 }
+
+#mesh {
+	cursor:pointer;
+	width: var(--meshS);
+	height: var(--meshS);
+	/*	background-color: rgba(88, 0, 255, 0.2);*/
+	/*	background: linear-gradient(rgba(38, 0, 165, 0.2) ,rgba(0,0,0,0) 50%);*/
+}
+
+#container {
+	margin: auto;
+	position: absolute; 
+	left: 0; 
+	right: 0; 
+	margin-left: auto; 
+	margin-right: auto;
+	width: var(--s);
+}
+
+#container p, #container a{
+	font-size: 1.1rem;
+	padding: 0;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 400;
+}
+
+#container p{
+	color: white;
+}
+
+#container a {
+	color: black;
+}
+
+#icon, .item {
+	cursor: pointer;
+	transition: background .5s ease;
+}
+
+#icon {
+	padding: 0.5rem;
+	background: var(--cbtn1);
+}
+
+.item{
+	padding: 0.5rem;
+	background: var(--cbtn2);
+}
+
+.item:hover {
+	background: var(--cbtnhover2);
+}
+
+#icon:hover {
+	background: var(--cbtnhover1);
+}
+
+#menu {
+	height: 0;
+	overflow: hidden;
+	transition: height .5s ease;
+}
+
+@keyframes bg-anim { 
+	0%, 100% { transform: rotate(0deg) translateX(0px); }
+	50%  { transform: rotate(360deg) translateX(calc( var(--bgs) / 4)); }
+	50.001%  { transform: rotate(-360deg) translateX(calc( var(--bgs) / 4));}
+}
+
 /*
-#mesh{
-  animation: 120s bgcol linear infinite;
+@media only screen and (max-width: 480px) {
+
 }
 */
-@keyframes bgcol {
-  0% {background:black;}
-  50% {background:rgba(255, 255, 255, 0);}
-  100% {background:black;}
-}
-
-/*- animation */
-@keyframes fadein {
-  12%{
-     opacity: 0;
-  } 
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-@keyframes dropin {
-  from {transform: translateY(-50px); }
-  to   {transform: translateY(0px); }
-}
-
-.linkwrap{
-  text-align: center;
-    margin: 0.5rem;
-  /*background-color: red !important;*/
-}
-
-.link:hover {
-    font-weight: 700;
-}
-
-#popup{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#vid{
-/*  width: 70%;*/
-  /*max-height: 90%;*/
-  opacity:0;
-}
-
-/*- queries */
-
-@media screen and (max-width: 640px) {
-    .wrapper {     
-    grid-template-rows: 30% 30% 40%;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-areas:
-                  "a a a b b b"
-                  "c c c c c c"
-                  "d d d d d d";
-    }
-    h1{
-        font-size: 1.1em;
-
-    }
-    .b{
-      padding: 1em;  
-    }  
-    
-    h3 {
-        font-size: 1.1em;   
-    }
-    .linkwrap {
-        font-size: 0.8em;  
-    }
-    
-}
-
-@media screen and (max-height: 400px) {
-    h1{
-        font-size: 0.8em;
-    }
-    h3 {
-        font-size: 0.9em;   
-    }
-    .linkwrap {
-        font-size: 0.6em;  
-    }
-    
-}
