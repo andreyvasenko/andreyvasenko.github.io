@@ -210,8 +210,8 @@ h1 span {
 	50.001%  { -webkit-transform: rotate(-360deg) translateX(calc( var(--bgs) / 4)); transform: rotate(-360deg) translateX(calc( var(--bgs) / 4));}
 }
 
-/*
-@media only screen and (max-width: 480px) {
-
+_:-ms-lang(x), _:-webkit-full-screen, #bg 
+{ 
+	display: none;
 }
-*/
+
