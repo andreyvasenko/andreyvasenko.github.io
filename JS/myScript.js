@@ -11,6 +11,10 @@
 		return Math.floor(Math.random() * (max - min + 1)) + min;
 	}
 
+	function isMobileDevice() {
+		return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+	}
+
 	function randomize()
 	{
 		//load random animation
@@ -28,7 +32,7 @@
 		window.document.documentElement.style.setProperty('--c3', colorSchemes[rdmInt][1]);
 		window.document.documentElement.style.setProperty('--c4', colorSchemes[rdmInt][2]);
 
-		if (/Edge/.test(navigator.userAgent)) {
+		if ( /Edge/.test(navigator.userAgent) || isMobileDevice()) {
 			window.document.documentElement.style.setProperty('--bg', colorSchemes[1][0]);
 		}
 
