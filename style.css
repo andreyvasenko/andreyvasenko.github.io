@@ -29,6 +29,7 @@
 .js {
 	visibility: visible;
 	opacity: 1;
+	-webkit-transition: opacity .5s ease 1s;
 	transition: opacity .5s ease 1s;
 }
 
@@ -36,6 +37,7 @@
 	margin: 0;
 	padding: 0;
 	border: 0;
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -64,8 +66,11 @@ body {
 	height: calc(var(--bgs) / 2);
 	border-radius: 100%;
 	background-color: var(--c3);
+	-webkit-filter: blur(calc(var(--bgs) / 5));
 	filter: blur(calc(var(--bgs) / 5));
+	-webkit-animation: bg-anim 30s linear infinite reverse;
 	animation: bg-anim 30s linear infinite reverse;
+	-webkit-animation-delay: -1s;
 	animation-delay: -1s;
 }
 
@@ -78,13 +83,17 @@ body {
 	height: var(--bgs);
 	border-radius: 100%;
 	background-color: var(--c4);
+	-webkit-filter: blur(calc(var(--bgs) / 5));
 	filter: blur(calc(var(--bgs) / 5));
+	-webkit-animation: bg-anim 30s linear infinite;
 	animation: bg-anim 30s linear infinite;
+	-webkit-animation-delay: -1s;
 	animation-delay: -1s;
 }
 
 #content {
 	margin: auto;
+	-webkit-box-shadow: var(--shadow);
 	box-shadow: var(--shadow);
 	z-index: 1;
 	border-radius: 8px 8px 0px 0px;
@@ -160,6 +169,7 @@ h1 span {
 
 #icon, .item {
 	cursor: pointer;
+	-webkit-transition: background .5s ease;
 	transition: background .5s ease;
 }
 
@@ -184,13 +194,20 @@ h1 span {
 #menu {
 	height: 0;
 	overflow: hidden;
+	-webkit-transition: height .5s ease;
 	transition: height .5s ease;
 }
 
+@-webkit-keyframes bg-anim { 
+	0%, 100% { -webkit-transform: rotate(0deg) translateX(0px); transform: rotate(0deg) translateX(0px); }
+	50%  { -webkit-transform: rotate(360deg) translateX(calc( var(--bgs) / 4)); transform: rotate(360deg) translateX(calc( var(--bgs) / 4)); }
+	50.001%  { -webkit-transform: rotate(-360deg) translateX(calc( var(--bgs) / 4)); transform: rotate(-360deg) translateX(calc( var(--bgs) / 4));}
+}
+
 @keyframes bg-anim { 
-	0%, 100% { transform: rotate(0deg) translateX(0px); }
-	50%  { transform: rotate(360deg) translateX(calc( var(--bgs) / 4)); }
-	50.001%  { transform: rotate(-360deg) translateX(calc( var(--bgs) / 4));}
+	0%, 100% { -webkit-transform: rotate(0deg) translateX(0px); transform: rotate(0deg) translateX(0px); }
+	50%  { -webkit-transform: rotate(360deg) translateX(calc( var(--bgs) / 4)); transform: rotate(360deg) translateX(calc( var(--bgs) / 4)); }
+	50.001%  { -webkit-transform: rotate(-360deg) translateX(calc( var(--bgs) / 4)); transform: rotate(-360deg) translateX(calc( var(--bgs) / 4));}
 }
 
 /*
