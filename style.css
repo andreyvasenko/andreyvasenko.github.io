@@ -96,7 +96,7 @@ body {
 	-webkit-box-shadow: var(--shadow);
 	box-shadow: var(--shadow);
 	z-index: 1;
-	border-radius: 8px 8px 0px 0px;
+	border-radius: 0px 0px 0px 0px;
 	overflow: hidden;
 }
 
