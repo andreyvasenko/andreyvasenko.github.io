@@ -1419,30 +1419,36 @@ var instamotion__ref5 = Object(preact_min["h"])('br', null);
 var _ref6 = Object(preact_min["h"])(
 	'h1',
 	null,
+	'InstaMotion'
+);
+
+var _ref7 = Object(preact_min["h"])(
+	'h2',
+	null,
 	'Career Page'
 );
 
-var _ref7 = Object(preact_min["h"])('img', { src: "/assets/img/instamotion-jobs-1.png" });
+var _ref8 = Object(preact_min["h"])('img', { src: "/assets/img/instamotion-jobs-1.png" });
 
-var _ref8 = Object(preact_min["h"])('img', { src: "/assets/img/instamotion-jobs-2.png" });
+var _ref9 = Object(preact_min["h"])('img', { src: "/assets/img/instamotion-jobs-2.png" });
 
-var _ref9 = Object(preact_min["h"])('img', { src: "/assets/img/instamotion-jobs-4.png" });
+var _ref10 = Object(preact_min["h"])('img', { src: "/assets/img/instamotion-jobs-4.png" });
 
-var _ref10 = Object(preact_min["h"])('img', { src: "/assets/img/instamotion-jobs-3.png" });
+var _ref11 = Object(preact_min["h"])('img', { src: "/assets/img/instamotion-jobs-3.png" });
 
-var _ref11 = Object(preact_min["h"])('img', { src: "/assets/img/instamotion-jobs-5.png" });
+var _ref12 = Object(preact_min["h"])('img', { src: "/assets/img/instamotion-jobs-5.png" });
 
-var _ref12 = Object(preact_min["h"])('img', { style: 'box-shadow:none;', src: "/assets/img/preview-instamotion.png" });
+var _ref13 = Object(preact_min["h"])('img', { style: 'box-shadow:none;', src: "/assets/img/preview-instamotion.png" });
 
-var _ref13 = Object(preact_min["h"])(
-	'h1',
+var _ref14 = Object(preact_min["h"])(
+	'h2',
 	null,
 	'Page Loader'
 );
 
-var _ref14 = Object(preact_min["h"])('img', { src: "/assets/img/instamotion-loader-1.png" });
+var _ref15 = Object(preact_min["h"])('img', { src: "/assets/img/instamotion-loader-1.png" });
 
-var _ref15 = Object(preact_min["h"])(
+var _ref16 = Object(preact_min["h"])(
 	'iframe',
 	{ height: '432', style: 'width: 100%;', scrolling: 'no', title: 'loader08', src: '//codepen.io/andreyvasenko/embed/zJwwrZ/?height=265&theme-id=0&default-tab=result', frameborder: 'no', allowtransparency: 'true', allowfullscreen: 'true' },
 	'See the Pen ',
@@ -1466,19 +1472,19 @@ var _ref15 = Object(preact_min["h"])(
 	'.'
 );
 
-var _ref16 = Object(preact_min["h"])(
-	'h1',
+var _ref17 = Object(preact_min["h"])(
+	'h2',
 	null,
 	'Process Steps'
 );
 
-var _ref17 = Object(preact_min["h"])('img', { src: "/assets/img/instamotion-info-1.png" });
+var _ref18 = Object(preact_min["h"])('img', { src: "/assets/img/instamotion-info-1.png" });
 
-var _ref18 = Object(preact_min["h"])('img', { src: "/assets/img/instamotion-info-2.png" });
+var _ref19 = Object(preact_min["h"])('img', { src: "/assets/img/instamotion-info-2.png" });
 
-var _ref19 = Object(preact_min["h"])('img', { src: "/assets/img/instamotion-info-3.png" });
+var _ref20 = Object(preact_min["h"])('img', { src: "/assets/img/instamotion-info-3.png" });
 
-var _ref20 = Object(preact_min["h"])(
+var _ref21 = Object(preact_min["h"])(
 	'iframe',
 	{ height: '432', style: 'width: 100%;', scrolling: 'no', title: 'infogfx steps', src: '//codepen.io/andreyvasenko/embed/OaoJGL/?height=432&theme-id=0&default-tab=result', frameborder: 'no', allowtransparency: 'true', allowfullscreen: 'true' },
 	'See the Pen ',
@@ -1502,7 +1508,21 @@ var _ref20 = Object(preact_min["h"])(
 	'.'
 );
 
-var _ref21 = Object(preact_min["h"])(
+var _ref22 = Object(preact_min["h"])(
+	'h2',
+	null,
+	'Footer'
+);
+
+var _ref23 = Object(preact_min["h"])('img', { src: "/assets/img/instamotion-footer-1.png" });
+
+var _ref24 = Object(preact_min["h"])('img', { src: "/assets/img/instamotion-footer-3.png" });
+
+var _ref25 = Object(preact_min["h"])('img', { src: "/assets/img/instamotion-footer-4.png" });
+
+var _ref26 = Object(preact_min["h"])('img', { src: "/assets/img/instamotion-footer-2.png" });
+
+var _ref27 = Object(preact_min["h"])(
 	'div',
 	{ 'class': 'buttons' },
 	Object(preact_min["h"])(
@@ -1544,6 +1564,7 @@ var instamotion_InstaMotion = function InstaMotion() {
 			'div',
 			{ 'class': instamotion_style_default.a.projectPart },
 			_ref6,
+			_ref7,
 			Object(preact_min["h"])(
 				'p',
 				{ 'class': instamotion_style_default.a.projectPart__details },
@@ -1555,12 +1576,12 @@ var instamotion_InstaMotion = function InstaMotion() {
 				Object(preact_min["h"])(
 					'div',
 					{ 'class': instamotion_style_default.a.pic },
-					_ref7
+					_ref8
 				),
 				Object(preact_min["h"])(
 					'div',
 					{ 'class': instamotion_style_default.a.pic },
-					_ref8
+					_ref9
 				)
 			)
 		),
@@ -1578,12 +1599,12 @@ var instamotion_InstaMotion = function InstaMotion() {
 				Object(preact_min["h"])(
 					'div',
 					{ 'class': instamotion_style_default.a.pic },
-					_ref9
+					_ref10
 				),
 				Object(preact_min["h"])(
 					'div',
 					{ 'class': instamotion_style_default.a.pic },
-					_ref10
+					_ref11
 				)
 			),
 			Object(preact_min["h"])(
@@ -1592,7 +1613,7 @@ var instamotion_InstaMotion = function InstaMotion() {
 				Object(preact_min["h"])(
 					'div',
 					{ 'class': instamotion_style_default.a.pic },
-					_ref11
+					_ref12
 				)
 			)
 		),
@@ -1610,14 +1631,14 @@ var instamotion_InstaMotion = function InstaMotion() {
 				Object(preact_min["h"])(
 					'div',
 					{ 'class': instamotion_style_default.a.pic },
-					_ref12
+					_ref13
 				)
 			)
 		),
 		Object(preact_min["h"])(
 			'div',
 			{ 'class': instamotion_style_default.a.projectPart },
-			_ref13,
+			_ref14,
 			Object(preact_min["h"])(
 				'p',
 				{ 'class': instamotion_style_default.a.projectPart__details },
@@ -1629,19 +1650,19 @@ var instamotion_InstaMotion = function InstaMotion() {
 				Object(preact_min["h"])(
 					'div',
 					{ 'class': instamotion_style_default.a.pic },
-					_ref14
+					_ref15
 				)
 			),
 			Object(preact_min["h"])(
 				'div',
 				{ 'class': instamotion_style_default.a.codepenEmbedded },
-				_ref15
+				_ref16
 			)
 		),
 		Object(preact_min["h"])(
 			'div',
 			{ 'class': instamotion_style_default.a.projectPart },
-			_ref16,
+			_ref17,
 			Object(preact_min["h"])(
 				'p',
 				{ 'class': instamotion_style_default.a.projectPart__details },
@@ -1653,26 +1674,69 @@ var instamotion_InstaMotion = function InstaMotion() {
 				Object(preact_min["h"])(
 					'div',
 					{ 'class': instamotion_style_default.a.pic },
-					_ref17
-				),
-				Object(preact_min["h"])(
-					'div',
-					{ 'class': instamotion_style_default.a.pic },
 					_ref18
 				),
 				Object(preact_min["h"])(
 					'div',
 					{ 'class': instamotion_style_default.a.pic },
 					_ref19
+				),
+				Object(preact_min["h"])(
+					'div',
+					{ 'class': instamotion_style_default.a.pic },
+					_ref20
 				)
 			),
 			Object(preact_min["h"])(
 				'div',
 				{ 'class': instamotion_style_default.a.codepenEmbedded },
-				_ref20
+				_ref21
 			)
 		),
-		_ref21
+		Object(preact_min["h"])(
+			'div',
+			{ 'class': instamotion_style_default.a.projectPart },
+			_ref22,
+			Object(preact_min["h"])(
+				'p',
+				{ 'class': instamotion_style_default.a.projectPart__details },
+				'Another part of the overall redesign was the website footer. We started by looking at the most important pages. After laying out all the sections as sticky notes, we noted their value for the customer and their purpose. Now we could clearly see how to reorganize elements to save space and make the navigation more intuitive.'
+			),
+			Object(preact_min["h"])(
+				'p',
+				{ 'class': instamotion_style_default.a.projectPart__details },
+				'The new footer was designed to use space more efficiently. I added average customer review scores and links to review sources to build trust in the website.'
+			),
+			Object(preact_min["h"])(
+				'div',
+				{ 'class': instamotion_style_default.a.picContainer },
+				Object(preact_min["h"])(
+					'div',
+					{ 'class': instamotion_style_default.a.pic },
+					_ref23
+				),
+				Object(preact_min["h"])(
+					'div',
+					{ 'class': instamotion_style_default.a.pic },
+					_ref24
+				),
+				Object(preact_min["h"])(
+					'div',
+					{ 'class': instamotion_style_default.a.pic },
+					_ref25
+				)
+			),
+			Object(preact_min["h"])(
+				'div',
+				{ 'class': instamotion_style_default.a.picContainer },
+				Object(preact_min["h"])(
+					'div',
+					{ 'class': instamotion_style_default.a.pic },
+					_ref26
+				)
+			)
+		),
+		_ref27
 	);
 };
 
