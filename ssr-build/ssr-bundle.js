@@ -1878,7 +1878,7 @@ var codepen__ref14 = Object(preact_min["h"])(
 
 var codepen__ref15 = Object(preact_min["h"])(
 	'a',
-	{ href: 'https://codepen.io' },
+	{ href: 'https://css-doodle.com/' },
 	'very interesting web component'
 );
 
